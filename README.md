@@ -5,7 +5,7 @@
 
 ---
 
-### Camondos básicos de prompt
+### Comandos básicos de prompt
 
 Listar o conteúdo de um diretório (pasta)
 
