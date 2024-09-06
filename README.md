@@ -20,7 +20,7 @@ mkdir <nome-da-pasta>
 
 Remover um diretório
 ```
-rmdir
+rmdir <nome-da-pasta>
 ```
 
 Acessar uma pasta
