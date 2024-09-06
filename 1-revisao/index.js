@@ -21,23 +21,26 @@ let numero2 = 7;
 //----------------------------------------------------------
 // Template String
 
+// forma convencional de montar um string com variáveis
+console.log('A soma de ', numero1, ' e ', numero2, ' é ', somar(numero1, numero2));
 // uso de template string para melhorar a formação da string
 console.log(`A soma de ${numero1} e ${numero2} é: ${somar(numero1, numero2)}`);
-console.log('A soma de ', numero1, ' e ', numero2, ' é ', somar(numero1, numero2));
 
 //----------------------------------------------------------
 // Arrow function / função anônima
 
-const multiplicar = (n1, n2) => {
-  let r = n1 * n2;
-  return r;
-};
+// forma convencional de criar uma função
 // function multiplicar(n1, n2) {
 //   let r = n1 * n2;
 //   return r;
 // }
+// utilização de arrow function e função anônima
+const multiplicar = (n1, n2) => {
+  let r = n1 * n2;
+  return r;
+};
 console.log(`A multiplicação de ${numero1} e ${numero2} é: ${multiplicar(numero1, numero2)}`);
-console.log(typeof(multiplicar));
+console.log(typeof(multiplicar)); // tipo da constante
 
 
 
