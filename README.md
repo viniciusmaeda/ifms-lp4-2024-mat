@@ -40,4 +40,14 @@ cd ..
 Para instalar o NodeJS e obter maiores informações sobre a biblioteca, acesse o endereço [NodeJS](https://nodejs.org/).
 
 
+Para iniciar um projeto Node, utilize uma das sintaxes abaixo. A primeira sintaxe irá solicitar dados para configurar o projeto Node. A segunda opção irá criar o projeto imediatamente com dados padrões. Os dados de configuração do projeto estarão disponíveis no arquivo **package.json**. 
 
+Iniciar um projeto fornecendo dados manualmente
+```
+npm init
+```
+
+Iniciar um projeto imediatamente com dados padrões
+```
+npm init -y
+```
