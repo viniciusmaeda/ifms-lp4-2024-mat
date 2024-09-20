@@ -1,5 +1,5 @@
 /*
-* Servidor que realiza operação de soma de dois parâmetros na url 
+* Servidor que realiza as operações matemáticas de dois parâmetros enviados através da url 
 */
 
 // importar módulo/bibliotecas
@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
     A subtração de ${n1} - ${n2} = <b>${n1 - n2}</b><br>
     A divisão de ${n1} / ${n2} = <b>${n1 / n2}</b><br>
     A multiplicação de ${n1} * ${n2} = <b>${n1 * n2}</b>
-  `;
+  `; // texto formato como código html
 
   res.write(txt); // mensagem no <body> da página
   // res.write('Hello World!!');
