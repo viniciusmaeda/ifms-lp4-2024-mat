@@ -1,3 +1,0 @@
-/**
- * Exemplo de servidor que manipula rotas requisitadas pelo usuário
- */
