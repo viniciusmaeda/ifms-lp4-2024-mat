@@ -1,3 +1,7 @@
+/**
+ * Exemplo de um servidor básico Node utilizando o módulo http
+ */
+
 // importando o módulo http
 const http = require('http');
 

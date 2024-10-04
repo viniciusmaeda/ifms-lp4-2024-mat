@@ -1,6 +1,6 @@
-/*
-* Servidor que realiza as operações matemáticas de dois parâmetros enviados através da url 
-*/
+/**
+ * Servidor que realiza as operações matemáticas de dois parâmetros enviados através da url
+ */
 
 // importar módulo/bibliotecas
 const http = require('http');
