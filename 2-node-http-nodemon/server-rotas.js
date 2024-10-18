@@ -9,24 +9,28 @@ const http = require('http');
 const hostname = '127.0.0.1';
 const port = 3000;
 
-// configuração inicial do servidor HTTP
+// configuração do servidor
 const server = http.createServer((req, res) => {
+
   // configuração do header
   res.writeHead(200, { 'Content-Type' : 'text/html; charset=utf-8' });
 
-  // extrar a url
   const url = req.url;
 
-  // manipulação da url
+  // manipulação das rotas do site
   if (url == '/') {
-    res.write('Você acessou a raiz do site.')
-  } else if (url == '/aquidauana') {
-    res.write('Você acessou o campus Aquidauana.');
+    res.write('Você está na rota <b>raiz</b> do site.');
+  } else if (url == '/contato') {
+    res.write('Você está na rota <b>contato</b> do site.');
+  } else if (url == '/sobre') {
+    res.write('Você está na rota <b>sobre</b> do site.');
   } else {
-    res.write('Página não encontrada.')
+    res.write('Esta página não existe.');
   }
 
+
   res.end();
+
 });
 
 // executar o servidor
