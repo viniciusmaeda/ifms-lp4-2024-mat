@@ -47,6 +47,7 @@ const server = http.createServer((req, res) => {
 
   } else {
     // configuração do header
+    // 404 página não encontrada
     res.writeHead(404, { 'Content-Type' : 'text/plain; charset=utf-8' });
     
     res.write('Esta página não existe.');
