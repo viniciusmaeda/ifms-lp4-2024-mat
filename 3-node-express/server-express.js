@@ -1,35 +1,24 @@
 // importação da biblioteca Express
+// para instalar rodo o comando: npm install express
 const express = require('express')
 
 // criação de um app Express
 const app = express();
 
+// importação das rotas
+const estudanteRotas = require('./routes/Estudante');
+
 // definição de parâmetros do servidor
 const hostname = '127.0.0.1';
 const port = 3000;
 
-// rota raiz da aplicação
 app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
+  res.send('Esta é a raiz do servidor.')
+})
 
-// rota para veículos
-app.get('/veiculo', (req, res) => {
-  res.send('Você está na rota veículo.');
-});
+// utilizar as rotas
+app.use('/estudante', estudanteRotas);
 
-// rota para clientes
-app.get('/cliente', (req, res) => {
-  res.send('Você está na rota cliente.')
-});
-
-app.put('/veiculo/salvar', (req, res) => {
-  res.send('Dados salvos com sucesso.');
-});
-
-app.delete('/veiculo/excluir', (req, res) => {
-  res.send('Dados excluídos com sucesso.');
-});
 
 // rodar a aplicação
 app.listen(port, hostname, console.log('Servidor rodando...'));
