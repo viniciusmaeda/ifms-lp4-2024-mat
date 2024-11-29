@@ -12,6 +12,17 @@ rotas.get("/", (req, res) => {
   })
 });
 
+// rota raiz para ESTUDANTE
+rotas.get("/:idEstudante", (req, res) => {
+
+  // obter o id enviado pela url
+  const idEstudante = req.params.idEstudante;
+
+  res.status(200).send({
+    mensagem: `O id recebido foi: ${idEstudante}.`
+  })
+});
+
 // rota put para ESTUDANTE
 rotas.put('/', (req, res) => {
   res.status(200).send({

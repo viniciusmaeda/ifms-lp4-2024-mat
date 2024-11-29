@@ -2,6 +2,9 @@
 // para instalar rodo o comando: npm install express
 const express = require('express')
 
+// instalação: npm install body-parser
+const bodyParser = require('body-parser');
+
 // criação de um app Express
 const app = express();
 
