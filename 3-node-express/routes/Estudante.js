@@ -5,21 +5,36 @@ const express = require('express');
 const rotas = express.Router();
 
 
-// rota raiz para estudante
+// rota raiz para ESTUDANTE
 rotas.get("/", (req, res) => {
-  res.send("Você está na raíz da rota estudante");
+  res.status(200).send({
+    mensagem: 'Você acessou a raiz da rota estudante.'
+  })
 });
 
-// rota put para estudante
+// rota put para ESTUDANTE
 rotas.put('/', (req, res) => {
-  res.send('Você está na rota put para estudante.');
+  res.status(200).send({
+    mensagem: 'Os dados do estudante foram atualizados com sucesso.'
+  });
 });
-
 
 // rota para o médoto post
+rotas.post('/', (req, res) => {
 
+  // implementação do recebimento dos dados para salvar no BD
+
+  res.status(201).send({
+    mensagem: 'Estudante cadastrado com sucesso.'
+  });
+});
 
 // rota para o médoto delete
+rotas.delete('/', (req, res) => {
+  res.status(202).send({
+    mensagem: 'Estudante excluído com sucesso.'
+  });
+});
 
 
 

@@ -7,6 +7,7 @@ const app = express();
 
 // importação das rotas
 const estudanteRotas = require('./routes/Estudante');
+const docenteRotas = require('./routes/Docente');
 
 // definição de parâmetros do servidor
 const hostname = '127.0.0.1';
@@ -18,6 +19,7 @@ app.get('/', (req, res) => {
 
 // utilizar as rotas
 app.use('/estudante', estudanteRotas);
+app.use('/docente', docenteRotas);
 
 
 // rodar a aplicação
