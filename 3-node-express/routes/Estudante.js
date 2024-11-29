@@ -34,17 +34,38 @@ rotas.put('/', (req, res) => {
 rotas.post('/', (req, res) => {
 
   // implementação do recebimento dos dados para salvar no BD
+  const novoEstudante = {
+    nome: req.body.nome,
+    email: req.body.email,
+    telefone: req.body.telefone,
+  };
+
+  // implementação do código para enviar para BD
 
   res.status(201).send({
-    mensagem: 'Estudante cadastrado com sucesso.'
+    mensagem: 'Estudante cadastrado com sucesso.',
+    dadosNovoEstudante: novoEstudante
   });
 });
 
 // rota para o médoto delete
 rotas.delete('/', (req, res) => {
-  res.status(202).send({
-    mensagem: 'Estudante excluído com sucesso.'
-  });
+
+  // obtém o id enviado pelo corpo da requisição
+  const idEstudante = req.body.idEstudante;
+
+  // implementação da consulta para verificar se existe o estudante
+  consultaIdBancoDados = 123
+
+  if (idEstudante == consultaIdBancoDados) {
+    res.status(202).send({
+      mensagem: `O estudante de id: ${idEstudante} excluído com sucesso.`
+    });
+  } else {
+    res.status(200).send({
+      mensagem: 'O estudante não foi encontrado no banco de dados.'
+    });
+  }
 });
 
 

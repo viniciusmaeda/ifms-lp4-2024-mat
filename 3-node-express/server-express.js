@@ -8,6 +8,10 @@ const bodyParser = require('body-parser');
 // criação de um app Express
 const app = express();
 
+// configurar o body-parser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // importação das rotas
 const estudanteRotas = require('./routes/Estudante');
 const docenteRotas = require('./routes/Docente');
